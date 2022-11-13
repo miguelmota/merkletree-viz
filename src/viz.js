@@ -97,7 +97,14 @@ class MerkleTreeViz {
     }
 
     const viz = new window.Treant(chartConfig)
+    this.instance = viz
     return viz
+  }
+
+  destroy() {
+    if (this.instance) {
+      this.instance.destroy()
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "merkletree-viz",
   "version": "0.0.1",
-  "description": "Merkle Tree visualization",
+  "description": "Merkle tree visualization library",
   "main": "merkletreeviz.js",
   "scripts": {
     "test": "TODO",
