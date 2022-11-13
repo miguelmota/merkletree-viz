@@ -1,6 +1,6 @@
 # merkletree-viz
 
-> Merke tree visualization library, works with [merkletreejs](https://github.com/miguelmota/merkletreejs).
+> Merke tree visualization library for browser, works with [`merkletreejs`](https://github.com/miguelmota/merkletreejs).
 
 ## Example
 
