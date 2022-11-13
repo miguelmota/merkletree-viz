@@ -1,0 +1,63 @@
+/* required LIB STYLES */
+/* .Treant se automatski dodaje na svaki chart conatiner */
+.Treant { position: relative; overflow: hidden; padding: 0 !important; }
+.Treant > .node,
+.Treant > .pseudo { position: absolute; display: block; visibility: hidden; }
+.Treant.Treant-loaded .node,
+.Treant.Treant-loaded .pseudo { visibility: visible; }
+.Treant > .pseudo { width: 0; height: 0; border: none; padding: 0; }
+.Treant .collapse-switch { width: 3px; height: 3px; display: block; border: 1px solid black; position: absolute; top: 1px; right: 1px; cursor: pointer; }
+.Treant .collapsed .collapse-switch { background-color: #868DEE; }
+.Treant > .node img {	border: none; float: left; }
+
+
+
+.node {
+  border: solid black 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+  font-family: 'Inconsolata', monospace;
+
+}
+
+.node > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.node.parent-node {
+  background-color: #d0e2f3;
+}
+.node.leaf-node {
+  background-color: #b6d7a8;
+}
+.node.root-node {
+  background-color: #ff807f;
+}
+body {
+  background-color: #ffffff;
+}
+* {
+    font-family: 'Inconsolata', monospace;
+    box-sizing: border-box;
+  }
+  .tree-container{
+    width: 100%;
+    float: left;
+    position: relative;
+    border: solid black;
+    border-size: 0.5px
+  }
+  .controls {
+    width: 30%;
+    float: left;
+    position: relative;
+  }
+  .controls > ul {
+      padding-top: 20px
+  }
+
+  .controls > textarea {
+    font-family: 'Inconsolata', monospace;
+  }
