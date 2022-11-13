@@ -1,6 +1,6 @@
 {
   "name": "merkletree-viz",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Merkle tree visualization library for browser, works with merkletreejs.",
   "main": "merkletreeviz.js",
   "scripts": {
