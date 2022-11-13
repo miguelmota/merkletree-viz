@@ -1,16 +1,46 @@
 {
-  "name": "merkle-ui",
-  "version": "1.0.0",
-  "main": "main.js",
+  "name": "merkletree-viz",
+  "version": "0.0.1",
+  "description": "Merkle Tree visualization",
+  "main": "merkletreeviz.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "TODO",
+    "lint": "standard --fix src/*.js",
+    "build": "cat src/vendor/raphael.js > merkletreeviz.js && npx browserify src/viz.js >> merkletreeviz.js"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "d3": "^7.6.1",
-    "keccak256": "^1.0.6",
-    "merkletreejs": "^0.3.2"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelmota/merkletree-viz"
   },
-  "description": ""
+  "keywords": [
+    "merkle",
+    "tree",
+    "hash",
+    "viz",
+    "visualization",
+    "html",
+    "javascript",
+    "canvas",
+    "ui"
+  ],
+  "author": {
+    "name": "Miguel Mota",
+    "email": "hello@miguelmota.com",
+    "url": "https://miguelmota.com/"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/miguelmota/merkletree-viz/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/miguelmota/merkletree-viz/issues"
+  },
+  "homepage": "https://github.com/miguelmota/merkletree-viz",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "standard": "^17.0.0"
+  },
+  "engines": {
+    "node": ">= 7.6.0"
+  }
 }
