@@ -13,29 +13,40 @@
 // <script src="https://cdn.jsdelivr.net/npm/merkletree-viz@latest/merkletreeviz.js"></script>
 
 const rawLeaves = []
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 8; i++) {
   rawLeaves.push(`${i}`)
 }
 const leaves = rawLeaves.map(keccak256)
 const tree = new MerkleTree(leaves, keccak256)
 const viz = new MerkleTreeViz('#viz')
 viz.renderTree(tree)
+viz.renderProof(tree.getHexProof(leaves[2]))
   </textarea>
   <button id="submit">Render</button>
   <div id="viz"></div>
   <script src="https://cdn.jsdelivr.net/npm/keccak256@latest/keccak256.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/merkletreejs@latest/merkletree.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/merkletree-viz@latest/merkletreeviz.js"></script>
-  <!--<script src="../merkletreeviz.js"></script>-->
+  <!--<script src="https://cdn.jsdelivr.net/npm/merkletree-viz@latest/merkletreeviz.js"></script>-->
+  <script src="../merkletreeviz.js"></script>
   <script>
     function render() {
+      const input = document.querySelector('#input').value
       try {
-        new Function(document.querySelector('#input').value)()
+        new Function(input)()
       } catch (err) {
         console.error(err)
         alert(err.message)
       }
+      try {
+        localStorage.setItem('input', input)
+      } catch (err) {}
     }
+    try {
+      const input = localStorage.getItem('input')
+      if (input) {
+        document.querySelector('#input').value = input
+      }
+    } catch (err) {}
     document.querySelector('#submit').addEventListener('click', event => {
       event.preventDefault()
       render()
